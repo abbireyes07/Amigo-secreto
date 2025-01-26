@@ -17,3 +17,19 @@ function agregarAmigo() {
     }
     console.log("Lista de amigos:", amigos);
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("La lista está vacía. Agrega nombres antes de sortear.");
+        return;
+    }
+
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSecreto = amigos[indiceAleatorio];
+    const mensaje = `Tu amigo secreto es: ${amigoSecreto}`;
+     document.getElementById("mensajeAmigoSecreto").textContent = mensaje;
+
+    console.log(mensaje);
+}
+
